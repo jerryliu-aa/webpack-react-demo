@@ -62,7 +62,7 @@ function generateConfig(lang) {
           test: /.*\.(gif|png|jpe?g)$/i,
           loaders: [
             'url?limit=1024&hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack-loader?{progressive:true, optimizationLevel: 7, interlaced: false}'
+            'image-webpack?{bypassOnDebug: true, progressive:true, optimizationLevel: 7, interlaced: false}'
           ]
         },
       ]

@@ -27,6 +27,7 @@
     "html-webpack-plugin": "^1.7.0",
     "i18n-webpack-plugin": "^0.2.7",
     "image-webpack-loader": "^1.6.2",
+    "imagemin-optipng": "^4.3.0",
     "lodash": "^3.10.1",
     "nuclear-js": "^1.2.1",
     "postcss": "^5.0.12",
