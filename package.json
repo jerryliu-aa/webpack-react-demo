@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -d --config webpack.dev.conf.js --progress --color --display-error-details",
-    "production": "webpack -p --config webpack.production.conf.js"
+    "build_dev": "webpack -d --config webpack.dev.conf.js --progress --color --display-error-details",
+    "run_dev": "webpack-dev-server -d --config webpack.dev.conf.js --progress --color --display-error-details --watch --hot",
+    "build_production": "webpack -p --config webpack.production.conf.js"
   },
   "author": "",
   "license": "ISC",
