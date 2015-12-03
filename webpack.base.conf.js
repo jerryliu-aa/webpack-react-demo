@@ -15,6 +15,12 @@ var languages = {
   'zh_CN': {}
 };
 
+var altParentLangNames = {
+  'zh_CN': 'zh',
+  'zh_TW': 'zh',
+  'en_US': 'en',
+};
+
 var altLangNames = {
   'zh_CN': 'zh-Hans-CN',
   'zh_TW': 'zh-Hant-TW',
@@ -24,6 +30,7 @@ var altLangNames = {
 function generateConfig(lang) {
 
   var altLangName = altLangNames[lang];
+  var altParentLangName = altParentLangNames[lang];
 
   var node_modules = path.resolve(__dirname, 'node_modules');
 
@@ -62,7 +69,6 @@ function generateConfig(lang) {
           test: /.*\.(gif|png|jpe?g)$/i,
           loaders: [
             'url?limit=1024&hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?{bypassOnDebug: true, progressive:true, optimizationLevel: 7, interlaced: false}'
           ]
         },
       ]
@@ -82,7 +88,9 @@ function generateConfig(lang) {
       new webpack.DefinePlugin({
         BUILD_I18N: '"' + lang + '"',
         BUILD_I18N_PATH: '"./' + lang + '.js"',
-        BUILD_INTL_PATH: '"intl/locale-data/jsonp/' + altLangName + '.js"',
+        BUILD_INTL_PATH: '"react-intl/dist/locale-data/' + altParentLangName + '.js"',
+        BUILD_INTL_NAME: '"' + altLangName + '"',
+        BUILD_INTL_PARENT_NAME: '"' + altParentLangName + '"',
       }),
       new I18nPlugin(
         languages[lang],
@@ -113,16 +121,7 @@ function generateConfig(lang) {
     'es6-promise',
   ];
 
-  // switch(lang) {
-  //   case 'en_US':
-  //   break;
-  //   case 'zh_TW':
-  //     config.entry['vendor-' + lang].push(path.resolve(node_modules, 'moment/locale/zh-tw.js'));
-  //   break;
-  //   case 'zh_CN':
-  //     config.entry['vendor-' + lang].push(path.resolve(node_modules, 'moment/locale/zh-cn.js'));
-  //   break;
-  // }
+  config.lang = lang;
 
   return config;
 }

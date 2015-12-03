@@ -1,4 +1,5 @@
 var React = require('react');
+var {injectIntl} = require('react-intl');
 
 require('./_style.scss');
 
@@ -11,28 +12,28 @@ var Header = React.createClass({
         <div className="logo-wrapper"><img src={require('./logo.png')} /></div>
         <Menu items={[
           {
-            text: 'Market Data'
+            text: this.props.intl.formatMessage({id: 'MARKET_DATA'})
           },
           {
-            text: 'Analytics'
+            text: this.props.intl.formatMessage({id: 'ANALYTICS'})
           },
           {
-            text: 'Insights'
+            text: this.props.intl.formatMessage({id: 'INSIGHTS'})
           },
         ]} />
         <div className="spacer" />
         <Menu items={[
           {
-            text: 'Tour'
+            text: this.props.intl.formatMessage({id: 'TOUR'})
           },
           {
-            text: 'Pricing'
+            text: this.props.intl.formatMessage({id: 'PRICING'})
           },
           {
-            text: 'About'
+            text: this.props.intl.formatMessage({id: 'ABOUT'})
           },
           {
-            text: 'Blog'
+            text: this.props.intl.formatMessage({id: 'BLOG'})
           },
         ]} />
         <div className="input-wrapper">
@@ -42,4 +43,4 @@ var Header = React.createClass({
     );
   }
 });
-module.exports = Header;
+module.exports = injectIntl(Header);
