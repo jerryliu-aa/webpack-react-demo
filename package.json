@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test",
+    "test": "npm run test_once",
     "build_dev": "webpack -d --config webpack.dev.conf.js --progress --color --display-error-details",
     "run_dev": "webpack-dev-server -d --config webpack.dev.conf.js --progress --color --display-error-details --watch --hot",
     "build_production": "webpack -p --config webpack.production.conf.js",
     "test_once": "karma start",
-    "test_watch": "karma start --single-run=false",
-    "test": "npm run test_once"
+    "test_watch": "karma start --single-run=false"
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +38,7 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
+    "keymirror": "^0.1.1",
     "lodash": "^3.10.1",
     "mocha": "^2.3.4",
     "nuclear-js": "^1.2.1",
@@ -48,6 +48,7 @@
     "postcss-import": "^7.1.3",
     "postcss-loader": "^0.8.0",
     "precss": "^1.3.0",
+    "q": "^1.4.1",
     "react": "^0.14.3",
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.3",

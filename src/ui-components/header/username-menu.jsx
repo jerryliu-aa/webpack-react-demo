@@ -4,7 +4,7 @@ var {injectIntl, FormattedMessage} = require('react-intl');
 var UsernameMenu = React.createClass({
   render () {
     return (
-      <div className="username-menu-wrapper">
+      <div className="username-menu-wrapper" onClick={this.props.onClick}>
         <div className="username-menu">
           <FormattedMessage
             id='USERNAME_MR'

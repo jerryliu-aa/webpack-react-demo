@@ -63,6 +63,8 @@ header {
     margin-left: 10px;
     vertical-align: middle;
     box-sizing: content-box;
+    -webkit-user-select: none;
+    cursor: pointer;
 
     .username-menu {
       height: 38px;

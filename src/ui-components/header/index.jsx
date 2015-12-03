@@ -39,7 +39,7 @@ var Header = React.createClass({
           },
         ]} />
         <AppSearchInput />
-        <UsernameMenu name="Jerry Liu"/>
+        <UsernameMenu name="Jerry Liu" onClick={this.props.onUserMenuClick}/>
       </header>
     );
   }

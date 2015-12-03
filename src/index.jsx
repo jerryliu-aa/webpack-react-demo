@@ -23,6 +23,8 @@ if ('ReactIntlLocaleData' in window) {
   });
 }
 
+require('./model/bootstrap.js');
+
 var App = React.createClass({
   render () {
     return (
