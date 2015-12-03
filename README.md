@@ -8,8 +8,9 @@
 
 ## Useful tags
 
-* `basic-struct`: minimal structre to setup a workspace
+* `basic-struct`: minimal structure to setup a workspace
 * `with-intl`: added i18n support
 * `with-test`: made ui testable
 * `model`: added model example
 * `model-with-test`: added test with model
+* `with-css-module`: added support for css module
