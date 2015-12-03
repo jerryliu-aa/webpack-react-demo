@@ -10,5 +10,9 @@ module.exports = {
     "PRICING": "定价",
     "ABOUT": "关于",
     "BLOG": "博客",
+
+    "APP_OR_PUBLISHER": "应用或发行商",
+
+    "USERNAME_MR": "{name} 先生",
   }
 };

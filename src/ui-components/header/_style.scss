@@ -57,4 +57,23 @@ header {
       border-radius: 2px;
     }
   }
+
+  > .username-menu-wrapper {
+    line-height: 60px;
+    margin-left: 10px;
+    vertical-align: middle;
+    box-sizing: content-box;
+
+    .username-menu {
+      height: 38px;
+      line-height: 38px;
+      padding: 0 12px;
+      display: inline-block;
+      vertical-align: middle;
+      box-sizing: border-box;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 2px;
+    }
+  }
 }

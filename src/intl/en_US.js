@@ -10,5 +10,9 @@ module.exports = {
     "PRICING": "Pricing",
     "ABOUT": "About",
     "BLOG": "Blog",
+
+    "APP_OR_PUBLISHER": "App or Publisher",
+
+    "USERNAME_MR": "Mr.{name}",
   }
 };

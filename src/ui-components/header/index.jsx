@@ -4,6 +4,8 @@ var {injectIntl} = require('react-intl');
 require('./_style.scss');
 
 var Menu = require('./menu');
+var AppSearchInput = require('./app-search-input');
+var UsernameMenu = require('./username-menu');
 
 var Header = React.createClass({
   render () {
@@ -36,9 +38,8 @@ var Header = React.createClass({
             text: this.props.intl.formatMessage({id: 'BLOG'})
           },
         ]} />
-        <div className="input-wrapper">
-          <input placeholder="App or Publisher" />
-        </div>
+        <AppSearchInput />
+        <UsernameMenu name="Jerry Liu"/>
       </header>
     );
   }
