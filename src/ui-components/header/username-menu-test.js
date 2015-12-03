@@ -22,14 +22,24 @@ function bootstrapTranslation() {
 
 var intlData = bootstrapTranslation();
 
-describe("Test UsernameMenu", function() {
-  it("cannot properly render", function() {
-    var comp = TestUtils.renderIntoDocument(
+describe("UsernameMenu", function() {
+  var comp = null;
+  var testName = 'testName';
+  beforeEach(function() {
+    comp = TestUtils.renderIntoDocument(
       <IntlProvider {...intlData}>
-          <UsernameMenu />
+          <UsernameMenu name={testName}/>
       </IntlProvider>
     );
+  });
+
+  it("should properly be rendered", function() {
     comp = TestUtils.findRenderedDOMComponentWithClass(comp, 'username-menu-wrapper');
     expect(TestUtils.isDOMComponent(comp)).toBe(true);
+  });
+
+  it("should have name when provided", function() {
+    comp = TestUtils.findRenderedDOMComponentWithClass(comp, 'username-menu');
+    expect(comp.textContent.indexOf(testName) >= 0).toBe(true);
   });
 });
