@@ -1,7 +1,7 @@
 var React = require('react');
 var {injectIntl} = require('react-intl');
 
-require('./_style.scss');
+var mangledClassNames = require('./_style.scss');
 
 var Menu = require('./menu');
 var AppSearchInput = require('./app-search-input');
@@ -10,8 +10,8 @@ var UsernameMenu = require('./username-menu');
 var Header = React.createClass({
   render () {
     return (
-      <header>
-        <div className="logo-wrapper"><img src={require('./logo.png')} /></div>
+      <header className={mangledClassNames['header']}>
+        <div className={mangledClassNames['logo-wrapper']}><img src={require('./logo.png')} /></div>
         <Menu items={[
           {
             text: this.props.intl.formatMessage({id: 'MARKET_DATA'})
@@ -23,7 +23,7 @@ var Header = React.createClass({
             text: this.props.intl.formatMessage({id: 'INSIGHTS'})
           },
         ]} />
-        <div className="spacer" />
+        <div className={mangledClassNames['spacer']} />
         <Menu items={[
           {
             text: this.props.intl.formatMessage({id: 'TOUR'})

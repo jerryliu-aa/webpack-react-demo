@@ -59,7 +59,7 @@ function generateConfig(lang) {
           }
         },
         // required to write "require('./style.css')"
-        { test: /\.s?css$/,    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader') },
+        { test: /\.s?css$/,    loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader') },
         // required for bootstrap icons
         { test: /\.woff/,   loader: 'url-loader?limit=7000' },
         { test: /\.ttf/,    loader: 'file-loader' },

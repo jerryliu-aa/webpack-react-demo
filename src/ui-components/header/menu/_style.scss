@@ -1,0 +1,18 @@
+:local .menus {
+  display: flex;
+  flex-direction: row;
+  > li {
+    padding: 0 12px;
+    line-height: 60px;
+    vertical-align: middle;
+    color: #fff;
+    cursor: pointer;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    &:hover {
+      background: #1c2c3b;
+    }
+  }
+}
