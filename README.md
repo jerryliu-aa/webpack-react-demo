@@ -1,10 +1,12 @@
 ## HOWTO
 
 * `npm i` to install all local dependencies
-  * `webpack`, `karma-cli` must be installed globally
+  * `webpack`, `webpack-dev-server` and `karma-cli` must be installed globally
 * `npm test` to run unit tests
 * `npm run run_dev` to start a dev env
 * `npm run build_production` to build a production ready package
+
+Web server port is `8080`, if you use `npm run run_dev`.
 
 ## Useful tags
 
